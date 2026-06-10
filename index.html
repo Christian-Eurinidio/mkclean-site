@@ -7,7 +7,7 @@
     <style>
         /* Reset e Fontes */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-        body { background-color: #f4f4f4; color: #333; }
+        body { background-color: #f4f4f4; color: #333; padding-bottom: 150px; }
         
         /* Cores Principais */
         :root {
@@ -63,21 +63,37 @@
 
         /* Rodapé / CTA */
         .cta-section {
-            background-color: var(--azul-escuro); color: #fff; padding: 30px 20px;
-            display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap;
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1000;
+            background-color: var(--azul-escuro); color: #fff; padding: 14px 20px;
+            display: flex; justify-content: center; align-items: center; flex-wrap: wrap;
+            gap: 24px;
+            border-top: 5px solid var(--amarelo);
+            box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.25);
         }
         .logo-area { text-align: center; max-width: 300px; }
-        .logo-area h2 { font-size: 2.5rem; }
+        .logo-area h2 { font-size: 2rem; }
         .logo-area span { color: #66b2ff; }
         
-        .contato-area { text-align: center; }
-        .contato-area h3 { font-size: 1.2rem; margin-bottom: 5px; }
-        .contato-area h2 { color: var(--amarelo); font-size: 3rem; margin-bottom: 15px; }
+        .contato-area {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .contato-area h3 { font-size: 1.2rem; margin-bottom: 0; }
+        .contato-area h2 { color: var(--amarelo); font-size: 2.4rem; margin-bottom: 0; }
         
         .btn-whatsapp {
             background-color: var(--verde-wpp); color: #fff; text-decoration: none;
-            padding: 15px 30px; border-radius: 50px; font-size: 1.2rem; font-weight: bold;
+            padding: 16px 34px; border-radius: 50px; font-size: 1.25rem; font-weight: bold;
             display: inline-block; transition: 0.3s;
+            box-shadow: 0 6px 16px rgba(37, 211, 102, 0.35);
         }
         .btn-whatsapp:hover { background-color: #1ebe57; transform: scale(1.05); }
 
@@ -89,9 +105,16 @@
 
         /* Responsividade para celular */
         @media (max-width: 600px) {
+            body { padding-bottom: 230px; }
             .card-servico { flex-direction: column; text-align: center; }
             .card-imagem { width: 100%; height: 200px; }
-            .cta-section { flex-direction: column; gap: 30px; text-align: center; }
+            .cta-section { flex-direction: column; gap: 10px; text-align: center; padding: 14px 16px; }
+            .logo-area h2 { font-size: 1.6rem; }
+            .logo-area p { font-size: 0.8rem; }
+            .contato-area { gap: 8px; flex-direction: column; }
+            .contato-area h3 { font-size: 1rem; }
+            .contato-area h2 { font-size: 2rem; }
+            .btn-whatsapp { width: 100%; max-width: 320px; padding: 15px 20px; font-size: 1.1rem; }
             .beneficios { flex-direction: column; gap: 15px; }
             .beneficio-item { width: 100%; }
         }
