@@ -3,195 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MKCLEAN - Limpeza Profissional</title>
-    <style>
-        /* Reset e Fontes */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-        body { background-color: #f4f4f4; color: #333; padding-bottom: 150px; }
-        
-        /* Cores Principais */
-        :root {
-            --azul-escuro: #00234b;
-            --azul-claro: #005bb5;
-            --amarelo: #ffcc00;
-            --verde-wpp: #25d366;
-        }
-
-        /* Cabeçalho */
-        header { text-align: center; padding: 20px; background: #fff; }
-        header h2 { color: var(--azul-claro); font-size: 1.5rem; text-transform: uppercase; }
-        header h1 { color: var(--azul-escuro); font-size: 3rem; font-style: italic; font-weight: 900; margin: 5px 0; }
-        header p { color: var(--azul-escuro); font-weight: bold; letter-spacing: 1px; }
-
-        /* Faixa Amarela */
-        .faixa-amarela {
-            background-color: var(--amarelo);
-            color: var(--azul-escuro);
-            text-align: center;
-            padding: 15px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        /* Serviços */
-        .servicos { padding: 20px; max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; }
-        .card-servico {
-            display: flex;
-            background: var(--azul-escuro);
-            color: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-            align-items: center;
-        }
-        .card-info { padding: 20px; flex: 1; }
-        .card-info h3 { color: #66b2ff; font-size: 1rem; }
-        .card-info h2 { font-size: 1.8rem; margin: 5px 0; }
-        .card-info p { font-size: 0.9rem; font-weight: lighter; }
-        .card-imagem { width: 40%; min-height: 150px; background-color: #ccc; } /* Área para imagem */
-        .card-imagem img { width: 100%; height: 100%; object-fit: cover; }
-
-        /* Benefícios (Ícones) */
-        .beneficios {
-            display: flex; justify-content: space-around; text-align: center;
-            max-width: 800px; margin: 20px auto; font-size: 0.9rem; font-weight: bold; color: var(--azul-escuro);
-        }
-        .beneficio-item { width: 30%; }
-
-        /* Rodapé / CTA */
-        .cta-section {
-            position: fixed;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 1000;
-            background-color: var(--azul-escuro); color: #fff; padding: 14px 20px;
-            display: flex; justify-content: center; align-items: center; flex-wrap: wrap;
-            gap: 24px;
-            border-top: 5px solid var(--amarelo);
-            box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.25);
-        }
-        .logo-area { text-align: center; max-width: 300px; }
-        .logo-area h2 { font-size: 2rem; }
-        .logo-area span { color: #66b2ff; }
-        
-        .contato-area {
-            text-align: center;
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .contato-area h3 { font-size: 1.2rem; margin-bottom: 0; }
-        .contato-area h2 { color: var(--amarelo); font-size: 2.4rem; margin-bottom: 0; }
-        
-        .btn-whatsapp {
-            background-color: var(--verde-wpp); color: #fff; text-decoration: none;
-            padding: 16px 34px; border-radius: 50px; font-size: 1.25rem; font-weight: bold;
-            display: inline-block; transition: 0.3s;
-            box-shadow: 0 6px 16px rgba(37, 211, 102, 0.35);
-        }
-        .btn-whatsapp:hover { background-color: #1ebe57; transform: scale(1.05); }
-
-        /* Footer final */
-        footer {
-            background: #001530; color: #fff; padding: 15px; display: flex;
-            justify-content: space-around; font-size: 0.8rem; text-align: center;
-        }
-
-        /* Responsividade para celular */
-        @media (max-width: 600px) {
-            body { padding-bottom: 230px; }
-            .card-servico { flex-direction: column; text-align: center; }
-            .card-imagem { width: 100%; height: 200px; }
-            .cta-section { flex-direction: column; gap: 10px; text-align: center; padding: 14px 16px; }
-            .logo-area h2 { font-size: 1.6rem; }
-            .logo-area p { font-size: 0.8rem; }
-            .contato-area { gap: 8px; flex-direction: column; }
-            .contato-area h3 { font-size: 1rem; }
-            .contato-area h2 { font-size: 2rem; }
-            .btn-whatsapp { width: 100%; max-width: 320px; padding: 15px 20px; font-size: 1.1rem; }
-            .beneficios { flex-direction: column; gap: 15px; }
-            .beneficio-item { width: 100%; }
-        }
-    </style>
+    <meta name="description" content="Limpeza técnica de vidros, placas solares e caixas d'água em Curitiba e região. Solicite orçamento gratuito pelo WhatsApp.">
+    <title>MKCLEAN - Limpeza Técnica em Curitiba</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <main>
+        <section class="hero" aria-label="MKCLEAN Limpeza Técnica">
+            <div class="hero-shade"></div>
+            <div class="hero-content">
+                <p class="eyebrow">MKCLEAN | Curitiba e Região</p>
+                <h1>Limpeza técnica para vidros, placas solares e caixas d'água</h1>
+                <p class="hero-lead">Recupere eficiência, proteja sua água e valorize seu imóvel com equipe treinada para serviços em altura.</p>
 
-    <header>
-        <h2>Limpeza</h2>
-        <h1>PROFISSIONAL</h1>
-        <p>— PARA SUA CASA OU EMPRESA! —</p>
-    </header>
+                <div class="hero-actions" aria-label="Ações principais">
+                    <a href="https://wa.me/5541988732523?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20MKCLEAN%20e%20quero%20um%20or%C3%A7amento%20gratuito." class="btn btn-primary" target="_blank" rel="noopener">
+                        <svg aria-hidden="true" viewBox="0 0 448 512">
+                            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+                        </svg>
+                        Receber orçamento grátis
+                    </a>
+                    <a href="tel:+5541988732523" class="btn btn-secondary">
+                        <svg aria-hidden="true" viewBox="0 0 24 24">
+                            <path d="M6.6 10.8a15.6 15.6 0 0 0 6.6 6.6l2.2-2.2a1.5 1.5 0 0 1 1.5-.36 10 10 0 0 0 3.1.5 1.5 1.5 0 0 1 1.5 1.5v3.5a1.5 1.5 0 0 1-1.5 1.5A18.5 18.5 0 0 1 2 3.5 1.5 1.5 0 0 1 3.5 2h3.6a1.5 1.5 0 0 1 1.5 1.5 10 10 0 0 0 .5 3.1 1.5 1.5 0 0 1-.36 1.5l-2.14 2.7z"/>
+                        </svg>
+                        Ligar agora
+                    </a>
+                </div>
 
-    <div class="faixa-amarela">
-        <span>✔️</span> MAIS SEGURANÇA, SAÚDE E ECONOMIA PARA VOCÊ!
-    </div>
-
-    <section class="servicos">
-        <div class="card-servico">
-            <div class="card-info">
-                <h3>LIMPEZA DE</h3>
-                <h2>COBERTURA DE VIDROS</h2>
-                <p>Mais luz, mais beleza e valorização do seu ambiente!</p>
+                <ul class="hero-proof" aria-label="Credenciais da MKCLEAN">
+                    <li>Orçamento gratuito</li>
+                    <li>Equipe treinada em altura</li>
+                    <li>Atendimento local</li>
+                </ul>
             </div>
-            <div class="card-imagem">
-                <img src="cobertura-vidros.jpg" alt="Limpeza de Vidros">
-            </div>
-        </div>
+        </section>
 
-        <div class="card-servico">
-            <div class="card-info">
-                <h3>LIMPEZA DE</h3>
-                <h2>CAIXA D'ÁGUA</h2>
-                <p>Água limpa e saúde para sua família!</p>
+        <section class="quick-proof" aria-label="Provas de confiança">
+            <div class="quick-proof-inner">
+                <span>5/5 em avaliações de clientes</span>
+                <span>Orçamento gratuito</span>
+                <span>Atendimento em Curitiba e região</span>
+                <span>WhatsApp direto com especialista</span>
             </div>
-            <div class="card-imagem">
-                <img src="caixa-de-agua.jpg" alt="Limpeza de Caixa d'água">
-            </div>
-        </div>
+        </section>
 
-        <div class="card-servico">
-            <div class="card-info">
-                <h3>LIMPEZA DE</h3>
-                <h2>PLACAS SOLARES</h2>
-                <p>Placas limpas geram mais energia e economia!</p>
+        <section class="section services" aria-labelledby="services-title">
+            <div class="section-heading">
+                <p class="eyebrow">Serviços especializados</p>
+                <h2 id="services-title">Você não contrata limpeza. Contrata resultado.</h2>
+                <p>Cada serviço foi organizado pelo que mais importa para quem veio de anúncio: economia, saúde, segurança e aparência do imóvel.</p>
             </div>
-            <div class="card-imagem">
-                <img src="placa-solar.jpg" alt="Limpeza de Placas Solares">
+
+            <div class="service-grid">
+                <article class="service-card">
+                    <img src="placa-solar.jpg" alt="Escova técnica limpando uma placa solar">
+                    <div class="service-copy">
+                        <span>Placas solares</span>
+                        <h3>Menos perda na conta de energia</h3>
+                        <p>Poeira, fuligem e marcas de chuva bloqueiam luz e reduzem a geração. A limpeza técnica ajuda o sistema a voltar a trabalhar com mais eficiência.</p>
+                        <a href="https://wa.me/5541988732523?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20para%20limpeza%20de%20placas%20solares." target="_blank" rel="noopener">Orçar placas solares</a>
+                    </div>
+                </article>
+
+                <article class="service-card">
+                    <img src="caixa-de-agua.jpg" alt="Caixa d'água externa em imóvel residencial">
+                    <div class="service-copy">
+                        <span>Caixas d'água</span>
+                        <h3>Água mais segura para a rotina</h3>
+                        <p>Lodo e resíduos podem se acumular sem aparecer na torneira. Fazemos higienização cuidadosa para reduzir riscos e preservar a qualidade da água.</p>
+                        <a href="https://wa.me/5541988732523?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20para%20limpeza%20de%20caixa%20d%27%C3%A1gua." target="_blank" rel="noopener">Orçar caixa d'água</a>
+                    </div>
+                </article>
+
+                <article class="service-card">
+                    <img src="cobertura-vidros.jpg" alt="Profissional limpando cobertura de vidro em altura">
+                    <div class="service-copy">
+                        <span>Vidros e coberturas</span>
+                        <h3>Mais luz e fachada valorizada</h3>
+                        <p>Removemos sujeira impregnada, marcas de chuva e poluição para devolver transparência sem improviso em locais altos ou de difícil acesso.</p>
+                        <a href="https://wa.me/5541988732523?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20para%20limpeza%20de%20vidros%20ou%20coberturas." target="_blank" rel="noopener">Orçar vidros</a>
+                    </div>
+                </article>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="beneficios">
-        <div class="beneficio-item">✔️ EVITA INFILTRAÇÕES E DANOS</div>
-        <div class="beneficio-item">💧 ÁGUA LIMPA E SAÚDE PARA SUA FAMÍLIA</div>
-        <div class="beneficio-item">☀️ PLACAS LIMPAS GERAM MAIS ENERGIA</div>
-    </section>
+        <section class="section proof-section" aria-labelledby="proof-title">
+            <div class="section-heading compact">
+                <p class="eyebrow">Antes e depois</p>
+                <h2 id="proof-title">Prova visual do que muda no seu imóvel</h2>
+                <p>Fotos reais ajudam você a entender o nível de sujeira escondida e o impacto da limpeza técnica.</p>
+            </div>
 
-    <section class="cta-section">
-        <div class="logo-area">
-            <h2>MK<span>CLEAN</span></h2>
-            <p>CUIDAMOS DO QUE É IMPORTANTE PARA VOCÊ!</p>
-        </div>
-        <div class="contato-area">
-            <h3>SOLICITE UM ORÇAMENTO</h3>
-            <h2>GRÁTIS!</h2>
-            <a href="https://wa.me/5541988732523?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento." class="btn-whatsapp" target="_blank">
-                CHAME NO WHATSAPP
+            <div class="comparison-grid">
+                <article class="comparison-card">
+                    <div class="comparison-title">
+                        <h3>Caixa d'água</h3>
+                        <span>Saúde e prevenção</span>
+                    </div>
+                    <div class="before-after">
+                        <figure class="photo">
+                            <img src="caixa_suja.jpeg" alt="Caixa d'água com acúmulo de sujeira">
+                            <figcaption>Antes</figcaption>
+                        </figure>
+                        <figure class="photo">
+                            <img src="caixa_limpa.jpeg" alt="Caixa d'água limpa e higienizada">
+                            <figcaption class="clean">Depois</figcaption>
+                        </figure>
+                    </div>
+                    <p>Remoção de resíduos acumulados para deixar a caixa em condição mais segura de uso.</p>
+                </article>
+
+                <article class="comparison-card">
+                    <div class="comparison-title">
+                        <h3>Placa solar</h3>
+                        <span>Eficiência recuperada</span>
+                    </div>
+                    <div class="before-after">
+                        <figure class="photo">
+                            <img src="placa_suja.jpeg" alt="Placas solares cobertas por poeira">
+                            <figcaption>Antes</figcaption>
+                        </figure>
+                        <figure class="photo">
+                            <img src="placa_limpa.jpeg" alt="Placas solares limpas após lavagem técnica">
+                            <figcaption class="clean">Depois</figcaption>
+                        </figure>
+                    </div>
+                    <p>Cada mês com sujeira acumulada pode significar menos energia gerada pelo sistema.</p>
+                </article>
+            </div>
+
+            <div class="center-action">
+                <a href="https://wa.me/5541988732523?text=Ol%C3%A1!%20Vi%20o%20antes%20e%20depois%20no%20site%20e%20quero%20um%20or%C3%A7amento." class="btn btn-primary" target="_blank" rel="noopener">
+                    <svg aria-hidden="true" viewBox="0 0 448 512">
+                        <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+                    </svg>
+                    Quero esse resultado
+                </a>
+            </div>
+        </section>
+
+        <section class="section risk-section" aria-labelledby="risk-title">
+            <div class="risk-copy">
+                <p class="eyebrow">Risco menor para você</p>
+                <h2 id="risk-title">Serviço em altura exige método, não improviso</h2>
+                <p>Seu maior medo não é a limpeza em si. É alguém quebrar uma telha, riscar um vidro, danificar uma placa ou deixar responsabilidade trabalhista para você. Por isso a MKCLEAN trabalha com processo, proteção e equipe identificada.</p>
+            </div>
+
+            <div class="risk-grid">
+                <article>
+                    <span>01</span>
+                    <h3>Equipe treinada</h3>
+                    <p>Profissionais preparados para rotina em telhados, coberturas e áreas de acesso difícil.</p>
+                </article>
+                <article>
+                    <span>02</span>
+                    <h3>Proteção do patrimônio</h3>
+                    <p>Cuidado com estrutura, vedação, placas solares e pontos sensíveis antes da execução.</p>
+                </article>
+                <article>
+                    <span>03</span>
+                    <h3>Atendimento direto</h3>
+                    <p>Você fala pelo WhatsApp, envia fotos e recebe orientação para avançar sem enrolação.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section process-section" aria-labelledby="process-title">
+            <div class="section-heading compact">
+                <p class="eyebrow">Como funciona</p>
+                <h2 id="process-title">Orçamento simples, sem visita desnecessária</h2>
+            </div>
+
+            <div class="process-grid">
+                <article>
+                    <strong>1</strong>
+                    <h3>Envie fotos pelo WhatsApp</h3>
+                    <p>Mostre o local, acesso e tamanho aproximado do serviço.</p>
+                </article>
+                <article>
+                    <strong>2</strong>
+                    <h3>Receba a orientação inicial</h3>
+                    <p>Avaliamos o tipo de limpeza, risco e melhor forma de execução.</p>
+                </article>
+                <article>
+                    <strong>3</strong>
+                    <h3>Agende com a equipe</h3>
+                    <p>Combinamos data, preparo do local e forma de pagamento.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section faq-section" aria-labelledby="faq-title">
+            <div class="section-heading compact">
+                <p class="eyebrow">Dúvidas comuns</p>
+                <h2 id="faq-title">Respostas rápidas antes do orçamento</h2>
+            </div>
+
+            <div class="faq-grid">
+                <details>
+                    <summary>Vocês atendem só Curitiba?</summary>
+                    <p>Atendemos Curitiba e região. Envie sua localização pelo WhatsApp para confirmar disponibilidade.</p>
+                </details>
+                <details>
+                    <summary>Preciso receber uma visita para ter preço?</summary>
+                    <p>Em muitos casos, fotos e medidas aproximadas já ajudam a montar uma estimativa inicial.</p>
+                </details>
+                <details>
+                    <summary>Vocês trabalham em altura?</summary>
+                    <p>Sim. A página destaca serviços em telhados, coberturas e áreas de acesso difícil com equipe treinada.</p>
+                </details>
+                <details>
+                    <summary>O orçamento tem compromisso?</summary>
+                    <p>Não. O primeiro contato serve para entender o serviço e orientar o próximo passo.</p>
+                </details>
+            </div>
+        </section>
+
+        <section class="final-cta" aria-label="Solicitar orçamento">
+            <div>
+                <p class="eyebrow">Pronto para resolver?</p>
+                <h2>Receba um orçamento gratuito pelo WhatsApp</h2>
+                <p>Envie fotos do local e fale direto com a MKCLEAN para vidros, placas solares ou caixas d'água.</p>
+            </div>
+            <a href="https://wa.me/5541988732523?text=Ol%C3%A1!%20Quero%20receber%20um%20or%C3%A7amento%20gratuito%20da%20MKCLEAN." class="btn btn-primary" target="_blank" rel="noopener">
+                <svg aria-hidden="true" viewBox="0 0 448 512">
+                    <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+                </svg>
+                Chamar no WhatsApp
             </a>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <footer>
-        <div>⏱️ ATENDIMENTO RÁPIDO</div>
-        <div>🏆 PROFISSIONAIS QUALIFICADOS</div>
-        <div>🛡️ SERVIÇO SEGURO E CONFIÁVEL</div>
-    </footer>
-
+    <div class="fixed-bottom-bar" aria-label="Contato rápido">
+        <a class="bar-phone" href="tel:+5541988732523">(41) 98873-2523</a>
+        <a href="https://wa.me/5541988732523?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento%20gratuito." class="bar-whatsapp" target="_blank" rel="noopener">
+            <svg aria-hidden="true" viewBox="0 0 448 512">
+                <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+            </svg>
+            Orçamento grátis
+        </a>
+    </div>
 </body>
 </html>
